@@ -1,6 +1,8 @@
 // original by SoundsLogical at
 // youtube.com/watch?v=hvqPFziOw2U#t=489s
 
+// added formatting, variables and server boot + volume 
+
 s.boot;
 s.volume = -17.3;
 
