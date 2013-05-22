@@ -13,4 +13,7 @@ the environment. sure buze has armstrong bindings for python and delivered some 
 So this supercollider stuff seems like an interesting language to learn, a bit like smalltalk but with syntax similar to C and groovy. there's a lot i don't know yet
 so i'll stop now and dig on. 
 
+initially i will follow along with the book: http://www.mat.ucsb.edu/275/CottleSC3.pdf but won't place direct answers to exercises
+here. you will likely find derived routines and explorations from all over (youtube, vimeo, github..etc)
+
 enjoy these snippets and projects, as i hope i do.
