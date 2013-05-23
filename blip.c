@@ -3,6 +3,4 @@
 /*
 note to self, use http://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model
 to simulate the behaviour of an action potential once a threshold is passed.
-
-
 */ 
