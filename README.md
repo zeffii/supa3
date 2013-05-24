@@ -1,4 +1,4 @@
-any text that isn't code will not care to be case sensitive. deal with it. 
+these are not the typos you're looking for.
 
 supa3
 =====
