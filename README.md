@@ -8,7 +8,7 @@ the whole reason i started getting interested in code was to create musical mach
 learning to code and enjoy it is a profoundly zen experience. 
 
 now when i attempt to write music in my regular tracker 'buze' (and more recently renoise) i can't help but feel the restriction of 
-the environment. sure buze has armstrong bindings for python and has delivered some fun, but it wasn't realtime. i kinda need realtime thesedays.
+the environment. sure buze has armstrong bindings for python and has [https://github.com/zeffii/LilPy](delivered some fun), but it wasn't realtime pattern production. i kinda need realtime thesedays.
 
 So this supercollider stuff seems like an interesting language to learn, like a mix of C++ and Smalltalk. there's a lot i don't know yet
 so i'll stop now and dig on. 
