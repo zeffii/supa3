@@ -1,6 +1,28 @@
-// very non optimal
+// very non optimal and lacks much error checking on note input
+
+SynthDef.new(\iter, {
+	arg freq=40;
+	var temp, sum, env;
+	sum = 0;
+	env = EnvGen.kr(
+		Env.perc(0.01, 5, 1, -2),
+		doneAction:2
+	);
+	10.do{
+		temp = VarSaw.ar(
+			freq * {Rand(0.99, 1.02)}!2,
+			{Rand(0.0, 1.0)}!2,
+			{ExpRand(0.005, 0.05)}!2
+		);
+		sum = sum + temp;
+	};
+	sum = sum * 0.05 * env;
+	Out.ar(0, sum);
+}).add;
 
 (
+
+~artful = ["C-6", "D#6", "G-6", "A#6"];
 
 ~findIndex = {
 	|source, item|
@@ -26,18 +48,20 @@
 	{note == "OFF"} {-2}
 	{note == "==="} {-3};
 
-        oct = if (return == nil, { note[2].asString.asInteger },{ -8 });
+    oct = if (return == nil, { note[2].asString.asInteger },{ -8 });
 	str = note.subStr(0,1);
-        index = ~findIndex.value(notes_list, str);
+    index = ~findIndex.value(notes_list, str);
 
 	return = if (oct > -1, { (index + (oct * 12)) }, { return });
 	return;
 };
 
 
-["C-4", "D#4", "G-4", "A#5"].do{
+~artful.do{
 	|item, index|
-	~strnote_midicps.value(item).postln;
+	var midinote = ~strnote_midicps.value(item);
+	Synth.new(\iter, [\freq, midinote.midicps]);
 };
 
 )
+
