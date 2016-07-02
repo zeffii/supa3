@@ -42,16 +42,16 @@ SynthDef.new(\iter, {
 	var str = "|";
 	var index = -1;
 	var notes_list = ["C-","C#","D-","D#","E-","F-","F#","G-","G#","A-","A#","B-"];
-
+	
 	return = case
 	{note == "..."} {-1}
 	{note == "OFF"} {-2}
 	{note == "==="} {-3};
-
-    oct = if (return == nil, { note[2].asString.asInteger },{ -8 });
+	
+	oct = if (return == nil, { note[2].asString.asInteger },{ -8 });
 	str = note.subStr(0,1);
-    index = ~findIndex.value(notes_list, str);
-
+	index = ~findIndex.value(notes_list, str);
+	
 	return = if (oct > -1, { (index + (oct * 12)) }, { return });
 	return;
 };
@@ -64,4 +64,4 @@ SynthDef.new(\iter, {
 };
 
 )
-//eof
+
